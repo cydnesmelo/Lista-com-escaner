@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Mercado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Mercado</h1>
+        <div class="form-container">
+            <button id="scanBarcode">Escanear Código de Barras</button>
+            <input type="text" id="produto" placeholder="Produto">
+            <input type="number" id="quantidade" placeholder="Quantidade">
+            <input type="number" id="valorUnitario" placeholder="Valor Unitário">
+            <button id="adicionar">Adicionar</button>
+            <button id="exportarExcel">Exportar para Excel</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unitário</th>
+                    <th>Valor Total</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaProdutos">
+                <!-- Itens serão inseridos aqui -->
+            </tbody>
+        </table>
+        <div class="total">
+            <h2>Total: R$ <span id="valorTotal">0.00</span></h2>
+        </div>
+    </div>
+    <!-- QuaggaJS: Biblioteca para escanear código de barras -->
+    <script src="quagga.min.js"></script>
+    <!-- SheetJS: Biblioteca para exportar para Excel -->
+    <script src="xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
